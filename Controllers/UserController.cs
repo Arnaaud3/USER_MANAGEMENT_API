@@ -2,7 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace User_management_api.Controllers
 {
-    [ApiController, Route("/[controller]")]
+    [Route("/[controller]")]
+    [ApiController]
+    
     public class UserController : ControllerBase
     {
         private readonly UserService _userService;
@@ -43,7 +45,29 @@ namespace User_management_api.Controllers
             return CreatedAtAction(nameof(GetById), new { id = createdUser.Id }, createdUser);
         }
 
-        [HttpDelete]
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, User updatedUser)
+        {
+            if (updatedUser == null || string.IsNullOrEmpty(updatedUser.Name) || updatedUser.Age < 0)
+            {
+                return BadRequest("Invalid user data");
+            }
+
+            var existingUser = _userService.GetUserById(id);
+            if (existingUser == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                existingUser.Name = updatedUser.Name;
+                existingUser.Age = updatedUser.Age;
+                return Ok(existingUser);
+            }
+
+        }
+
+        [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             bool isDeleted = _userService.DeleteUserById(id);

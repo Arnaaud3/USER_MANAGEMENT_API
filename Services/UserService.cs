@@ -4,8 +4,8 @@ using System.Diagnostics;
 
 public class UserService
 {
-    private static List<User> _users = new List<User>();
-    private static int _nextId = 1;
+    private List<User> _users = new List<User>();
+    private int _nextId = 1;
 
     public List<User> GetAllUsers()
     {

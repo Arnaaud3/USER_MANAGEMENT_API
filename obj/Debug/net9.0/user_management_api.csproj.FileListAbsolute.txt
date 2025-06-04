@@ -26,3 +26,4 @@ C:\Users\teche\Documents\02_PROJET_PERSO\04_IA_PROJECT\07_C#_LEARNING\user_manag
 C:\Users\teche\Documents\02_PROJET_PERSO\04_IA_PROJECT\07_C#_LEARNING\user_management_api\user_management_api\obj\Debug\net9.0\user_management_api.pdb
 C:\Users\teche\Documents\02_PROJET_PERSO\04_IA_PROJECT\07_C#_LEARNING\user_management_api\user_management_api\obj\Debug\net9.0\user_management_api.genruntimeconfig.cache
 C:\Users\teche\Documents\02_PROJET_PERSO\04_IA_PROJECT\07_C#_LEARNING\user_management_api\user_management_api\obj\Debug\net9.0\ref\user_management_api.dll
+C:\Users\teche\Documents\02_PROJET_PERSO\04_IA_PROJECT\07_C#_LEARNING\user_management_api\user_management_api\obj\Debug\net9.0\user_management_api.sourcelink.json
